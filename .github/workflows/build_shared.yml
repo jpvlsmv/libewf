@@ -1,8 +1,6 @@
 # Build from source with libyal dependencies as shared libraries.
 name: build_shared
-on:
-  push:
-    branches: [main]
+on: [ workflow_dispatch ]
 jobs:
   build_shared_ubuntu:
     runs-on: ubuntu-22.04
