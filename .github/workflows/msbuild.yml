@@ -32,6 +32,9 @@ jobs:
     - name: Restore NuGet packages
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: nuget restore ${{env.SOLUTION_FILE_PATH}}
+      
+    - name: Convert vcproj file
+      run: devenv /Upgrade ewf.net/ewf.net.vcproj
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
