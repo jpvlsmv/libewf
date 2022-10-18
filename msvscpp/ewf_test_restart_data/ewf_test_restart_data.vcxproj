@@ -14,6 +14,7 @@
     <ProjectGuid>{8242F203-D045-4C7E-A5F0-70C10A12D34D}</ProjectGuid>
     <RootNamespace>ewf_test_restart_data</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VSDebug|Win32'" Label="Configuration">

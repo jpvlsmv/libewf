@@ -14,6 +14,7 @@
     <ProjectGuid>{726193D1-4ACD-473B-8910-068C34C1B8B1}</ProjectGuid>
     <RootNamespace>ewf_test_deflate</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VSDebug|Win32'" Label="Configuration">

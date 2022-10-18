@@ -14,6 +14,7 @@
     <ProjectGuid>{7D57918B-6B13-4F5D-BA51-04BB6047A91C}</ProjectGuid>
     <RootNamespace>ewfacquire</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VSDebug|Win32'" Label="Configuration">

@@ -14,6 +14,7 @@
     <ProjectGuid>{173A1653-1C58-4D06-8320-E349477FB044}</ProjectGuid>
     <RootNamespace>ewf_test_md5_hash_section</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VSDebug|Win32'" Label="Configuration">

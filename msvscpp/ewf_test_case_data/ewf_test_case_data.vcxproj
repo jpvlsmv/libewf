@@ -14,6 +14,7 @@
     <ProjectGuid>{0BC781F3-3A43-436C-9210-3F2283710284}</ProjectGuid>
     <RootNamespace>ewf_test_case_data</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VSDebug|Win32'" Label="Configuration">
