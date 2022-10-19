@@ -33,6 +33,7 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: nuget restore ${{env.SOLUTION_FILE_PATH}}
     
+    - run: choco install winflexbison3
     - run: ./synclibs.ps1
     - run: ./syncwinflexbison.ps1
     - run: ./synczlib.ps1
