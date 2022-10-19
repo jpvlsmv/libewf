@@ -26,16 +26,16 @@ If (-Not (Test-Path $Python))
 {
     Write-Host "Missing configured Python: ${Python}" -foreground Yellow
     # Check for other pythons
-    $Python = get-command python.exe  
+    $Python = if ($p= get-command python.exe) { $p.Path }
 }
-If (-Not (Test-Path $Python.Path))
+If (-Not (Test-Path $Python))
 {
     Write-Host "Could not find any python.exe" -foreground Red
     Invoke-Expression -command "py -0p"
     Exit ${ExitFailure}
 }
 
-Write-Host "found python on path: ${Python.Path}" -foreground Yellow
+Write-Host "found python on path: ${Python}" -foreground Yellow
 Invoke-Expression -Command "${Python} -V"
 
 If (-Not (Test-Path ${VSToolsPath}))
@@ -114,9 +114,8 @@ ElseIf (${VisualStudioVersion} -eq "2019")
 }
 If (-Not ${MSBuild})
 {
-	Write-Host "Unable to determine path to msbuild.exe" -foreground Red
-
-	Exit ${ExitFailure}
+	Write-Host "Unable to use predefined path to msbuild.exe" -foreground Yellow
+	$MSBuild = if ($t = get-command "msbuild.exe") { $t.Path }
 }
 ElseIf (-Not (Test-Path ${MSBuild}))
 {
