@@ -34,8 +34,8 @@ jobs:
       run: nuget restore ${{env.SOLUTION_FILE_PATH}}
     
     - run: choco install winflexbison3
-    - run: ./synclibs.ps1
     - run: ./syncwinflexbison.ps1
+    - run: ./synclibs.ps1
     - run: ./synczlib.ps1
     - run: ./autogen.ps1
 
