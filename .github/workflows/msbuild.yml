@@ -40,7 +40,6 @@ jobs:
     - run: ./syncbzip2.ps1
     - run: ./syncdokan.ps1
     - run: ./autogen.ps1
-    - run: ./build.ps1
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
