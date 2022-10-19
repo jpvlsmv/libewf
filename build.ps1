@@ -24,10 +24,18 @@ $MSVSCppConvert = "${VSToolsPath}\scripts\msvscpp-convert.py"
 
 If (-Not (Test-Path $Python))
 {
-    Write-Host "Missing Python: ${Python}" -foreground Red
-
+    Write-Host "Missing configured Python: ${Python}" -foreground Yellow
+    # Check for other pythons
+    $Python = get-command python.exe  
+}
+If (-Not (Test-Path $Python))
+{
     Exit ${ExitFailure}
 }
+
+Write-Host "found python on path: ${Python.Path}" -foreground Yellow
+Invoke-Expression -Command "${Python} -V"
+
 If (-Not (Test-Path ${VSToolsPath}))
 {
 	# PowerShell will raise NativeCommandError if git writes to stdout or stderr
