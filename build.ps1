@@ -28,8 +28,10 @@ If (-Not (Test-Path $Python))
     # Check for other pythons
     $Python = get-command python.exe  
 }
-If (-Not (Test-Path $Python))
+If (-Not (Test-Path $Python.Path))
 {
+    Write-Host "Could not find any python.exe" -foreground Red
+    Invoke-Expression -command "py -0p"
     Exit ${ExitFailure}
 }
 
