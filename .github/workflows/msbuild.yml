@@ -25,10 +25,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Update autoconf and associated libs
+      run: |
+           ./synclibs.ps1
+           ./syncwinflexbison.ps1
+           ./synczlib.ps1
+           ./autogen.ps1
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
-      
       
     - name: Restore NuGet packages
       working-directory: ${{env.GITHUB_WORKSPACE}}
