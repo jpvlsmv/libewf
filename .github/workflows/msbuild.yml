@@ -37,10 +37,16 @@ jobs:
     - run: ./syncwinflexbison.ps1
     - run: ./synclibs.ps1
     - run: ./synczlib.ps1
+    - run: ./syncbzip2.ps1
+    - run: ./syncdokan.ps1
     - run: ./autogen.ps1
+    - run: ./build.ps1
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
       # Add additional options to the MSBuild command line here (like platform or verbosity level).
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
+      
+    - name: Build dokan
+      run: ./builddokan.ps1
